@@ -1,0 +1,110 @@
+
+
+
+
+*{
+margin:0 ;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(255, 252, 252);
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 2rem;
+max-width: 15000px;
+}
+.navigation ul{
+display: flex;
+list-style-type: none;
+gap: 2rem;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: rgb(0, 135, 253);
+}
+
+
+.navigation a:hover {
+    color: aquamarine;
+}
+
+.hero {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 5rem auto;
+max-width: 1200px;
+}
+.arrow {
+position: absolute;
+transform: translateX(-5.5rem);translate:(1.5rem);
+}
+.herosup {
+display: flex;
+flex-direction: column;
+gap:0.5rem;
+}
+.name {
+font-size:7rem;
+color: #000000ee;
+}
+
+.title {
+
+font-size:4rem;
+color: blue;
+}
+.heroBtns {
+display: flex;
+gap: 1rem;
+margin-top: 1.5rem;
+}
+
+.hireMe{
+background-color: chartreuse;
+color: aliceblue;
+border: 24px;
+text-decoration:none;
+padding: 0.5rem 1.5rem;
+text-shadow:0px 4px 4px rgba(0,0,0, 0.5);
+
+}
+
+.cv {
+
+background-color: rgb(127, 119, 194);
+color: aliceblue;
+border: 24px;
+text-decoration:none;
+padding: 0.5rem 1.5rem;
+text-shadow:0px 4px 4px rgba(0,0,0, 0.5);
+display: flex;
+align-items:center;
+gap:0.5rem;
+backdrop-filter:blur(4px)
+}
+
+.ABOUTMY {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 5REM;
+max-width: 1200px;
+gap: 10REM;
+}
+
+@media(max-width:1023px) {
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+
+
+}

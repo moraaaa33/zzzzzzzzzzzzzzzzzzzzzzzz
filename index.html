@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عمررر | الموقع الشخصي والمعرض</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 8%;
+      background: #1e293b;
+      border-bottom: 1px solid #334155;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 55px);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      font-size: 18px;
+      line-height: 1.8;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #0284c7;
+      color: white;
+      padding: 12px 26px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0369a1;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    .btn-outline:hover {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .section {
+      padding: 60px 8%;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 35px;
+      color: #f1f5f9;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 20px;
+    }
+
+    .project-info h3 {
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
+
+    .project-info p {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* تعديل قسم التواصل لمنع التكدس وتوسيطه بالكامل */
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      background: #1e293b;
+      padding: 40px 25px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .contact-container p {
+      color: #94a3b8;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .phone-number {
+      font-size: 22px;
+      font-weight: bold;
+      color: #38bdf8;
+      direction: ltr;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .social-btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .whatsapp { background: #25d366; }
+    .facebook { background: #1877f2; }
+
+    .social-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e293b;
+      color: #64748b;
+      border-top: 1px solid #334155;
+      margin-top: auto;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+      nav a {
+        margin: 0 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">عمررر</div>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#portfolio">الأعمال والمشاريع</a>
+      <a href="#contact">التواصل</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>مرحباً بك في موقع <span>عمررر</span></h1>
+    <p>
+      خبرة طويلة في المهارات والاستشارات المهنية. أقدم حلولاً متكاملة وأعمالاً ذات جودة عالية تخدم تطلعات العملاء والمؤسسات.
+    </p>
+
+    <div class="btn-container">
+      <a href="#portfolio" class="btn">استعرض الأعمال</a>
+      <a href="#contact" class="btn btn-outline">معلومات التواصل</a>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>معرض الأعمال والمشاريع</h2>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <img src="assets/imgs/webApp.png" alt="مشروع 1">
+        <div class="project-info">
+          <h3>عنوان المشروع الأول</h3>
+          <p>شرح مختصر عن طبيعة المشروع والإنجازات التي تم تحقيقها فيه.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="assets/imgs/landingPage.png" alt="مشروع 2">
+        <div class="project-info">
+          <h3>عنوان المشروع الثاني</h3>
+          <p>شرح مختصر عن مشروع استشاري أو عمل مكتمل لعميل أو شركة.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <img src="assets/imgs/app.png" alt="مشروع 3">
+        <div class="project-info">
+          <h3>عنوان المشروع الثالث</h3>
+          <p>تفاصيل الأعمال السابقة والإشراف المهني المنجز.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>تواصل مع عمررر</h2>
+
+    <div class="contact-container">
+      <p>للاستشارات والاستفسارات عن الأعمال، يمكنك التواصل عبر الهاتف أو من خلال منصات التواصل الاجتماعي:</p>
+
+      <div class="phone-number">
+        📞 +20 01203229986
+      </div>
+
+      <div class="social-links">
+        <a href="https://wa.me/2001203229986" target="_blank" class="social-btn whatsapp">واتساب</a>
+        <a href=" https://www.facebook.com/share/1LvBagdn63/" target="_blank" class="social-btn facebook">فيسبوك</a>
+      </div>
+
+      <a href="assets/CV.pdf" download class="btn">
+        تحميل السيرة الذاتية (CV)
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 عمررر. جميع الحقوق محفوظة.
+  </footer>
+
+</body>
+</html>
